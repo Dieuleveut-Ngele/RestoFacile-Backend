@@ -29,3 +29,25 @@ exports.login = async (req, res, next) => {
   } catch (error) {}
 };
 
+
+exports.signup = async (req, res, next) => {
+    const { email, password, role } = req.body;
+  
+    const pwdHashed = await bcrypt.hash(password, 10);
+  
+    const createdUser = await User.create({
+      data: {
+        email,
+        password: pwdHashed,
+        role,
+      },
+    });
+  
+    if (!createdUser) {
+      return res
+        .status(400)
+        .json({ error: "Echec de la création de l'utilisateur" });
+    }
+  
+    res.status(201).json({ message: "Utilisateur créé !" });
+  };
