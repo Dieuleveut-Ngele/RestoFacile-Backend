@@ -30,11 +30,11 @@ model User {
 model Restaurant {
   id          Int      @id @default(autoincrement())
   name        String   @unique
-  description String
+  description String?
   address     String
   city        String
-  state       String
-  zipCode     String
+  state       String?
+  zipCode     String?
   phone       String
   email      String
   website     String?
@@ -83,15 +83,15 @@ model OwnerRegistrationForm {
   email       String
   phone       String
   password    String
-  restaurantName String
-  restaurantDescription String
-  restaurantAddress String
-  restaurantCity String
-  restaurantState String
-  restaurantZipCode String
-  restaurantPhone String
-  restaurantEmail String
-  restaurantWebsite String
+  restaurantName String?
+  restaurantDescription String?
+  restaurantAddress String?
+  restaurantCity String?
+  restaurantState String?
+  restaurantZipCode String?
+  restaurantPhone String?
+  restaurantEmail String?
+  restaurantWebsite String?
   createdAt      DateTime @default(now())
 }
 
