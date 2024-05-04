@@ -24,22 +24,20 @@ model User {
   createdAt      DateTime @default(now())
   sessions UserSession[]
   reservation Reservation[]
-  restaurant Restaurant[]
+ // restaurant Restaurant[]
 }
 
 model Restaurant {
   id          Int      @id @default(autoincrement())
   name        String   @unique
-  description String?
   address     String
   city        String
-  state       String?
-  zipCode     String?
   phone       String
-  email      String
+  email       String
+  description String?
   website     String?
-  ownerId     Int      @unique
-  owner       User     @relation(fields: [ownerId], references: [id])
+  //ownerId     Int      @unique
+  //owner       User     @relation(fields: [ownerId], references: [id])
   reservation Reservation[]
 }
 
@@ -64,34 +62,32 @@ model UserSession {
   createdAt      DateTime @default(now())
 }
 
-model NewsletterSubscription {
+model Newsletter {
   id          Int      @id @default(autoincrement())
   email       String   @unique
 }
 
-model ContactFormSubmission {
+model Contact {
   id          Int      @id @default(autoincrement())
   name        String
   email       String
+  phone       String
   message     String 
 }
 
-model OwnerRegistrationForm {
+model Owner {
   id          Int      @id @default(autoincrement())
   firstName   String
   lastName    String
   email       String
   phone       String
-  password    String
-  restaurantName String?
-  restaurantDescription String?
-  restaurantAddress String?
-  restaurantCity String?
-  restaurantState String?
-  restaurantZipCode String?
-  restaurantPhone String?
-  restaurantEmail String?
-  restaurantWebsite String?
-  createdAt      DateTime @default(now())
+ 
 }
+
+model todo {
+  todo_id       Int      @id @default(autoincrement())
+  description   String
+}
+  
+
 
