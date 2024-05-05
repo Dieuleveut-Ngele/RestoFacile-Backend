@@ -55,6 +55,23 @@ exports.deleteRestaurantById = async (req, res) => {
   }
 }
 
+exports.updateRestaurantById = async (req, res) => {
+  try {
+    const restaurants = await Restaurant.update({
+      where: {
+        id: parseInt(req.params.id),
+      },
+      data: req.body,
+    });
+    if (!restaurants) {
+      return res.status(404).json({ message: 'Restaurant non trouvé' });
+    }
+    res.status(200).json({message: 'Restaurant modifié avec succès', restaurants});
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
 
 
 
