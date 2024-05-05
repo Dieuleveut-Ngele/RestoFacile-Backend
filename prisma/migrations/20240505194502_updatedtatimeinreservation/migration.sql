@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Reservation" ALTER COLUMN "heure" SET DATA TYPE TEXT,
+ALTER COLUMN "dateTime" SET DATA TYPE TEXT;
