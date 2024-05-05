@@ -21,6 +21,7 @@ model User {
   firstName String?
   lastName  String?
   phone     String?
+  sexe      String?
   createdAt      DateTime @default(now())
   sessions UserSession[]
   reservation Reservation[]
@@ -43,14 +44,14 @@ model Restaurant {
 
 model Reservation {
   id          Int      @id @default(autoincrement())
-  userId      Int      @unique
-  restaurantId Int      @unique
+  userId      Int?     @unique
+  restaurantId Int ?     @unique
   heure       DateTime
   dateTime    DateTime
   numberPeople   String
   createdAt      DateTime @default(now())
-  user        User     @relation(fields: [userId], references: [id])
-  restaurant  Restaurant @relation(fields: [restaurantId], references: [id])
+  user        User ?    @relation(fields: [userId], references: [id])
+  restaurant  Restaurant? @relation(fields: [restaurantId], references: [id])
 }
 
 model UserSession {
@@ -81,7 +82,7 @@ model Owner {
   lastName    String
   email       String
   phone       String
- 
+  sexe        String
 }
 
 model todo {
