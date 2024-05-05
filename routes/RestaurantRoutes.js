@@ -9,5 +9,6 @@ router.post('/postrestaurant', upload.single('image'), restaurantCntroller.creat
 //router.post('/restaurants',  restaurantCntroller.createRestaurants);
 router.get('/getrestaurant', restaurantCntroller.getAllRestaurants);
 router.get('/getrestaurant/:id', restaurantCntroller.getRestaurantById);
+router.delete('/deleterestaurant/:id', restaurantCntroller.deleteRestaurantById);
 
 module.exports = router;

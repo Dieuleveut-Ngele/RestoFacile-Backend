@@ -39,6 +39,22 @@ exports.getRestaurantById = async (req, res) => {
   }
 }
 
+exports.deleteRestaurantById = async (req, res) => {
+  try {
+    const restaurants = await Restaurant.delete({
+      where: {
+        id: parseInt(req.params.id),
+      },
+    });
+    if (!restaurants) {
+      return res.status(404).json({ message: 'Restaurant non trouvée' });
+    }
+    res.status(200).json({ message: 'Restaurant supprimé avec succès', restaurants });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}
+
 
 
 
