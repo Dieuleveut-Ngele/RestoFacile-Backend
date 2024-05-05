@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const useRoutes = require('./routes/UseRoutes');
 //    const useRoutesLogin = require('./routes/UseRoutes');
 //     const useRoutesSignup = require('./routes/UseRoutes');
@@ -7,6 +8,8 @@ const useRoutes = require('./routes/UseRoutes');
 //     const useRoutesgetAllUsers = require('./routes/UseRoutes');
 //    const useRestaurantRoutes = require('./routes/RestaurantRoutes')
 //const useTodo = require('./routes/TodoRoutes')
+
+app.use(cors());
 
 const app = express();
 
