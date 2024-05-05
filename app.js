@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
  app.use('/user', useRoutes);
- app.use('/restaurant', useRestaurantRoutes);
+ app.use('/', useRestaurantRoutes);
 //app.use('/', useTodo);
 
 
