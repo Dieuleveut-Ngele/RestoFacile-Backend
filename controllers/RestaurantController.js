@@ -13,6 +13,18 @@ exports.createRestaurant =  async (req, res) => {
   }
 };
 
+exports.getAllRestaurants = async (req, res) => {
+  try {
+    const restaurant = await Restaurant.findMany();
+    res.status(200).json({ message: 'Voici la liste de nos restaurants!', restaurant });
+  } catch (error) {
+    res.status(500).json({ error: 'Erreur lors de la recherche des restaurants' });
+  }
+};
+
+
+
+
 
 /*exports.createRestaurant = async (req, res, next) => {
   try {
