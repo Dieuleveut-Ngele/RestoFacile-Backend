@@ -30,6 +30,17 @@ exports.login = async (req, res, next) => {
 };
 
 
+exports.getAllUsers = async (req, res, next) => {
+  try {
+    const users = await User.findMany();
+    res.status(200).json(users);
+  } catch (error) {
+    console.error("Erreur lors de la récupération des utilisateurs :", error);
+    res.status(500).json({ error: "Une erreur s'est produite lors de la récupération des utilisateurs." });
+  }
+};
+
+
 exports.signup = async (req, res, next) => {
     const { email, password, role } = req.body;
   
