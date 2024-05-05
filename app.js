@@ -9,9 +9,10 @@ const useRoutes = require('./routes/UseRoutes');
 //    const useRestaurantRoutes = require('./routes/RestaurantRoutes')
 //const useTodo = require('./routes/TodoRoutes')
 
-app.use(cors());
 
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
