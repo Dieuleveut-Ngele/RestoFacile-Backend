@@ -23,6 +23,22 @@ exports.getAllRestaurants = async (req, res) => {
 };
 
 
+exports.getRestaurantById = async (req, res) => {
+  try {
+    const restaurant = await Restaurant.findUnique({
+      where: {
+        id: parseInt(req.params.id),
+      },
+    });
+    if (!restaurant) {
+      return res.status(404).json({ message: 'Restaurant non trouvée', restaurant });
+    }
+    res.status(200).json(restaurant);
+  } catch (error) {
+    res.status(500).json({ error: 'Erreur lors de la recherche des restaurants' });
+  }
+}
+
 
 
 

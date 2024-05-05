@@ -5,8 +5,9 @@ const multer = require('multer');
 
 const upload = multer({ dest: 'uploads/' }); 
 
-router.post('/postresto', upload.single('image'), restaurantCntroller.createRestaurant);
+router.post('/postrestaurant', upload.single('image'), restaurantCntroller.createRestaurant);
 //router.post('/restaurants',  restaurantCntroller.createRestaurants);
-router.get('/getresto', restaurantCntroller.getAllRestaurants);
+router.get('/getrestaurant', restaurantCntroller.getAllRestaurants);
+router.get('/getrestaurant/:id', restaurantCntroller.getRestaurantById);
 
 module.exports = router;
