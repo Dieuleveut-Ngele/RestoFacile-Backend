@@ -5,7 +5,7 @@ const multer = require('multer');
 
 const upload = multer({ dest: 'uploads/' }); 
 
-router.post('/restaurants', upload.single('image'), restaurantCntroller.createRestaurant);
+router.post('/postrestaurant', upload.single('image'), restaurantCntroller.createRestaurant);
 //router.post('/restaurants',  restaurantCntroller.createRestaurants);
 
 
