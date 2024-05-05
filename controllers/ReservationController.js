@@ -12,3 +12,12 @@ exports.createReservation = async (req, res) => {
       res.status(500).send({ error: 'Erreur lors de la création de la réservation' });
     }
   };
+
+  exports.getAllReservations = async (req, res) => {
+    try {
+      const reservation = await Reservation.findMany();
+      res.status(200).json({ message: 'Voici la liste de nos reservations!', reservation });
+    } catch (error) {
+      res.status(500).json({ error: 'Erreur lors de la recherche des reservations' });
+    }
+  };

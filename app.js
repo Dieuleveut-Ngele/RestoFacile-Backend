@@ -14,8 +14,8 @@ app.use(cors());
 app.use(express.json());
 
  app.use('/user', useRoutes);
- app.use('/', useRestaurantRoutes);
- app.use('/', useReservationRoutes);
+ app.use('/restaurant', useRestaurantRoutes);
+ app.use('/reservation', useReservationRoutes);
 //app.use('/', useTodo);
 
 
