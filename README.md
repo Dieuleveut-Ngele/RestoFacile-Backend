@@ -1,4 +1,4 @@
-Bienvenu dans Node JS & Express Js, Prisma ORM et PostgreSQL: 
+# Bienvenu dans Node JS & Express Js, Prisma ORM et PostgreSQL: 
 Projet Chef-d'oeuvre pour la fin de ma formation à Kadea Academy
 
 # Description
@@ -44,6 +44,7 @@ Pour en savoir plus sur express consulter la doc officielle via ce lien suivant 
 
 Créez un fichier .env à la racine du répertoire backend et ajoutez les variables d'environnement nécessaires, notamment le lien de la base de données PostgreSQL fourni par Render.
 
+<<<<<<< HEAD
 # Scripts d'initialisation de la base de données
 
 - npx prisma init --datasource-provider sqlite
@@ -55,3 +56,6 @@ Le script 'npx prisma init --datasource-provider sqlite' est une commande Prisma
 La commande "npx prisma migrate dev --name createdbOnRunder" est une commande Prisma qui permet de générer et d'appliquer une migration nommée "init". 
 
 Pour demarrer le projet executer la commande : npm start
+=======
+Pour demarrer le projet executer la commande : npm start
+>>>>>>> 2544720a052d31b14d78687111384337941116da
