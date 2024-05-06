@@ -85,10 +85,6 @@ model Owner {
   sexe        String
 }
 
-model todo {
-  todo_id       Int      @id @default(autoincrement())
-  description   String
-}
   
 
 
