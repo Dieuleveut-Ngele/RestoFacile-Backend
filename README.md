@@ -45,3 +45,5 @@ Pour en savoir plus sur express consulter la doc officielle via ce lien suivant 
 # CONFIGURATION
 
 Créez un fichier .env à la racine du répertoire backend et ajoutez les variables d'environnement nécessaires, notamment le lien de la base de données PostgreSQL fourni par Render.
+
+Pour demarrer le projet executer la commande : npm start
