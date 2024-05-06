@@ -1,11 +1,9 @@
 Bienvenu dans Node JS & Express Js, Prisma ORM et PostgreSQL: 
 Projet Chef-d'oeuvre pour la fin de ma formation à Kadea Academy
 
-# DESCRIPTION 
+# Description
 
 RestoFacile est une application qui simplifie la gestion des restaurants,  en permettant la reservation des tables, la gestion des menus, des commandes, et bien plus encore.
-
-# BACK-END 
 
 Le backend de RestoFacile est développé en utilisant les technologies suivantes :
 
@@ -15,7 +13,7 @@ Le backend de RestoFacile est développé en utilisant les technologies suivante
 - PostgreSQL comme base de données. 
 - Runder comme hebergeur: L'API est hébergée sur Render.
 
-# INSTALATION 
+# Installation
 
 0. Rassurez-vous preparer votre environnement en installant :
 
@@ -42,8 +40,18 @@ Pour en savoir plus sur express consulter la doc officielle via ce lien suivant 
 5. Installer prisma avec la commande : npm install prisma --save
 Pour en savoir plus sur express consulter la doc officielle via ce lien suivant : https://www.prisma.io/
 
-# CONFIGURATION
+# Configuration
 
 Créez un fichier .env à la racine du répertoire backend et ajoutez les variables d'environnement nécessaires, notamment le lien de la base de données PostgreSQL fourni par Render.
+
+# Scripts d'initialisation de la base de données
+
+- npx prisma init --datasource-provider sqlite
+
+Le script 'npx prisma init --datasource-provider sqlite' est une commande Prisma qui initialise un nouveau projet Prisma en utilisant PostgreSQL comme fournisseur de base de données.
+
+- npx prisma migrate dev --name createdbOnRunder
+
+La commande "npx prisma migrate dev --name createdbOnRunder" est une commande Prisma qui permet de générer et d'appliquer une migration nommée "init". 
 
 Pour demarrer le projet executer la commande : npm start
