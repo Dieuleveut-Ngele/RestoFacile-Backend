@@ -45,6 +45,7 @@ Pour en savoir plus sur express consulter la doc officielle via ce lien suivant 
 Créez un fichier .env à la racine du répertoire backend et ajoutez les variables d'environnement nécessaires, notamment le lien de la base de données PostgreSQL fourni par Render.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Scripts d'initialisation de la base de données
 
 - npx prisma init --datasource-provider sqlite
@@ -59,3 +60,6 @@ Pour demarrer le projet executer la commande : npm start
 =======
 Pour demarrer le projet executer la commande : npm start
 >>>>>>> 2544720a052d31b14d78687111384337941116da
+=======
+Pour demarrer le projet executer la commande : npm start
+>>>>>>> fec24823e9f90fb534077bc6c7a3273342423ac7
