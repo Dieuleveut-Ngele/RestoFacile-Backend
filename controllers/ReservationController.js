@@ -21,3 +21,13 @@ exports.createReservation = async (req, res) => {
       res.status(500).json({ error: 'Erreur lors de la recherche des reservations' });
     }
   };
+
+  exports.getAllUsers = async (req, res, next) => {
+    try {
+      const users = await User.findMany();
+      res.status(200).json(users);
+    } catch (error) {
+      console.error("Erreur lors de la récupération des utilisateurs :", error);
+      res.status(500).json({ error: "Une erreur s'est produite lors de la récupération des utilisateurs." });
+    }
+  };
